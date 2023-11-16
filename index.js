@@ -10,13 +10,14 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 app.get('/monuments', async (req, res) => {
-  const { data, error } = await db.from('monuments').select('*');
+  const { data, error } = await db.from('monument').select('*');
   console.log(data);
   res.send(data);
 });
 
 app.get('/users', async (req, res) => {
   const { data, error } = await db.from('users').select('*');
+  console.log(data);
   res.send(data);
 });
 
