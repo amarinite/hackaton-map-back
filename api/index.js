@@ -16,7 +16,7 @@ app.get('/monuments', async (req, res) => {
 });
 
 app.get('/users', async (req, res) => {
-  const { data, error } = await db.from('users').select('*');
+  const { data, error } = await db.from('user').select('*');
   console.log(data);
   res.send(data);
 });
